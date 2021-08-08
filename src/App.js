@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import City from './City';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class App extends Component {
   constructor(props){
@@ -35,6 +36,7 @@ export class App extends Component {
         cityName:data.display_name,
         lat:data.lat,
         lon:data.lon ,
+
         
          
       })
@@ -51,11 +53,11 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <h1>LocationIQ API Demo</h1>
+        <h1 className = 'top'>LocationIQ API Demo</h1>
         <h2>{this.state.errorMsg}</h2>
         <form onSubmit={(e)=>this.submitHandler(e)}>
           <input type="text" onChange={(e)=>{this.getUserInputHandler(e)}} placeholder="Search by City name, Street, county..."/>
-          <input type="submit" value="Search"/>
+          <input type="submit" value="Explore!"/>
         </form>
         <City cityName={this.state.cityName} lat={this.state.lat} lon={this.state.lon}/>
         <br/>
