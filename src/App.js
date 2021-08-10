@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import City from './City';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Weather from './Weather';
 
 export class App extends Component {
   constructor(props){
@@ -22,6 +23,28 @@ export class App extends Component {
     console.log(this.state.cityName);
   }
 
+
+  weather=(city)=>{
+    let url =`http://localhost:8080/weather/${city.split(',')[0]}`
+
+    axios.get(url).then(res=>{
+      let data = res.data;
+      console.log(data)
+
+      this.setState({
+        weatherData :data,
+        errMsg : false
+      })
+    }).catch((error)=>{
+      this.setState({
+        errMsg : true,
+        msg:`the weather not found`,
+        weatherData:[]
+
+      })
+      
+    })
+  }
   submitHandler=(e)=>{
   
     e.preventDefault();
@@ -63,7 +86,13 @@ export class App extends Component {
         <br/>
         <img src ={`https://maps.locationiq.com/v3/staticmap?key=pk.e730c42178a78fe83cdbf3950f14dac3&center=${this.state.lat},${this.state.lon}&zoom=1-18`} alt =""/>
         
+        {this.state.weatherData && <> {this.state.weatherData.map((e)=>{
+           
+           return(
+           <Weather cityDate={e.date} description ={e.description}/>)
+        })}</>}
       </div>
+      
     )
   }
 }
