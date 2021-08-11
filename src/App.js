@@ -25,7 +25,7 @@ export class App extends Component {
 
 
   weather=(city)=>{
-    let url =`http://localhost:8080/weather/${city.split(',')[0]}`
+    let url =`http://localhost:3004/weather?cityName=/${city.split(',')[0]}`
 
     axios.get(url).then(res=>{
       let data = res.data;
