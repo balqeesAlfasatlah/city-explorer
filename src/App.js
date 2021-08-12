@@ -12,7 +12,8 @@ export class App extends Component {
       lat:"",
       lon:"",
       cityName:" " ,
-      errorMsg : " "
+      errorMsg : " ",
+      searchQuery : " "
     }
   }
 
@@ -24,29 +25,10 @@ export class App extends Component {
   }
 
 
-  weather=(city)=>{
-    let url =`http://localhost:3004/weather?cityName=/${city.split(',')[0]}`
 
-    axios.get(url).then(res=>{
-      let data = res.data;
-      console.log(data)
-
-      this.setState({
-        weatherData :data,
-        errMsg : false
-      })
-    }).catch((error)=>{
-      this.setState({
-        errMsg : true,
-        msg:`the weather not found`,
-        weatherData:[]
-
-      })
-      
-    })
-  }
   submitHandler=(e)=>{
   
+    
     e.preventDefault();
     
     let url=`https://eu1.locationiq.com/v1/search.php?key=pk.60346fba30221450f0bd55e67928ff53&q=${this.state.cityName}&format=json`;
@@ -55,10 +37,13 @@ export class App extends Component {
    axios.get(url).then(res=>{
       let data= res.data[0]
 
+    
+
       this.setState({
         cityName:data.display_name,
         lat:data.lat,
-        lon:data.lon ,
+        lon:data.lon , 
+        searchQuery :this.state.className
 
         
          
@@ -71,7 +56,26 @@ export class App extends Component {
         })
         
     });
+
+    this.weather();
   }
+
+  weather= async ()=>{
+    const city = this.state.cityName;
+    console.log(this.state.cityName);
+    let url =`http://localhost:4000/weather?cityName=${city}&format=json`;
+    
+
+    let wheatherdata = await axios.get(url)
+    await this.setState({
+      weatherData :wheatherdata.data,
+        errMsg : false
+      })
+  
+
+      
+    }
+  
   
   render() {
     return (
