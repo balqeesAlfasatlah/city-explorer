@@ -63,7 +63,7 @@ export class App extends Component {
   weather= async ()=>{
     const city = this.state.cityName;
     console.log(this.state.cityName);
-    let url =`http://localhost:4000/weather?cityName=${city}&format=json`;
+    let url =`http://localhost:4001/weather?cityName=${city}`;
     
 
     let wheatherdata = await axios.get(url)
