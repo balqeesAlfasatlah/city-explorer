@@ -33,7 +33,7 @@
 
 + Actual time needed to complete: 3 hours
 
----
+
 
 ## feature 2 : display map 
 
@@ -66,7 +66,7 @@
 
 + Actual time needed to complete: 3 hours
 
----
+
 
 ## feature 2 : display error msg
 
@@ -98,7 +98,7 @@
 
 + Actual time needed to complete: week
 
----
+
 
 ## feature 2 : display movies 
 
@@ -130,20 +130,34 @@
 
 + Actual time needed to complete: 20 min
 
+
+
 ---
 
-## feature 2 : Modularize the frontend
+# lab 10 :
 
-+ Name of feature: Modularize the frontend code
+## feature 1 : Update the modules to require in the cache object. 
 
-+ Estimate of time needed to complete:  1 hour
++ Name of feature: cache 
 
-+ Start time: 3:00 pm
++ Estimate of time needed to complete: 30 min
 
-+ Finish time: 4:00 pm
++ Start time: 2:00 pm
 
-+ Actual time needed to complete: 1 hour
++ Finish time: 2:30 pm
+
++ Actual time needed to complete: 20 min
+
+## feature 2: Add an environment variable to in server named `YELP_API_KEY` 
 
 
++ Name of feature: yelp 
 
++ Estimate of time needed to complete: 30 min
+
++ Start time: 2:00 pm
+
++ Finish time: 2:30 pm
+
++ Actual time needed to complete: 20 min
 
