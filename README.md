@@ -19,23 +19,23 @@
 
 ## Credit and Collaborations
 ---
-## feature 1 : Map 
+## feature 1 : display the weather for any city
 
-+ Name of feature: display map
++ Name of feature: display weather
 
-+ Estimate of time needed to complete: 25 min
++ Estimate of time needed to complete: day
 
 + Start time: 2:15 pm
 
-+ Finish time: 2:40 pm
++ Finish time: 2am
 
-+ Actual time needed to complete: 15 min
++ Actual time needed to complete: week
 
 ---
 
-## feature 2 : Error 
+## feature 2 : display movies 
 
-+ Name of feature: Error msg
++ Name of feature: movies
 
 + Estimate of time needed to complete: 3 hours
 
