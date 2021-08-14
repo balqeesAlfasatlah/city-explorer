@@ -19,6 +19,73 @@
 
 ## Credit and Collaborations
 ---
+# Lab 6 :
+
+## feature 1 : display the location
+
++ Name of feature: display location
+
++ Estimate of time needed to complete: 3 hours
+
++ Start time: 2:15 pm
+
++ Finish time: 6 pm
+
++ Actual time needed to complete: 3 hours
+
+---
+
+## feature 2 : display map 
+
++ Name of feature: map
+
++ Estimate of time needed to complete: 2 hours
+
++ Start time: 2:00 pm
+
++ Finish time: 4:00 pm
+
++ Actual time needed to complete: 2 hours
+
+
+![](api.png)
+
+---
+
+# lab 7 :
+
+## feature 1 : display the weather 
+
++ Name of feature: display weather
+
++ Estimate of time needed to complete: 6 hours
+
++ Start time: 2: pm
+
++ Finish time: 1am
+
++ Actual time needed to complete: 3 hours
+
+---
+
+## feature 2 : display error msg
+
++ Name of feature: error
+
++ Estimate of time needed to complete: 2 hours
+
++ Start time: 3:00 pm
+
++ Finish time: 5:00 pm
+
++ Actual time needed to complete: 2 hours
+
+
+![](api.png)
+---
+
+# lab 8 :
+
 ## feature 1 : display the weather for any city
 
 + Name of feature: display weather
@@ -46,5 +113,37 @@
 + Actual time needed to complete: 2 hours
 
 
-![](api.png)
+
+---
+
+# lab 9 :
+
+## feature 1 : Modularize the back-end
+
++ Name of feature: Modularize the back-end code
+
++ Estimate of time needed to complete: 30 min
+
++ Start time: 2:00 pm
+
++ Finish time: 2:30 pm
+
++ Actual time needed to complete: 20 min
+
+---
+
+## feature 2 : Modularize the frontend
+
++ Name of feature: Modularize the frontend code
+
++ Estimate of time needed to complete:  1 hour
+
++ Start time: 3:00 pm
+
++ Finish time: 4:00 pm
+
++ Actual time needed to complete: 1 hour
+
+
+
 
