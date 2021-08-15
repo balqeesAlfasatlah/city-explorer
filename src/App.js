@@ -48,7 +48,7 @@ export class App extends Component {
         errorMsg: `${err}`
       })
     });
-    let weatherUrl = `http://localhost:4001/weather?city=${this.state.cityName}`;
+    let weatherUrl = `${process.env.REACT_APP_SERVER}/weather?city=${this.state.cityName}`;
      axios.get(weatherUrl).then(res => {
        let weatherList=res.data
       this.setState({
@@ -61,7 +61,7 @@ export class App extends Component {
         errorMsg: `${err}`
       })
     });
-    let movieUrl = `http://localhost:4001/movie?query=${this.state.cityName}`;
+    let movieUrl = `${process.env.REACT_APP_SERVER}/movie?query=${this.state.cityName}`;
 
 
      axios.get(movieUrl).then(res =>{
