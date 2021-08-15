@@ -48,9 +48,10 @@ export class App extends Component {
         errorMsg: `${err}`
       })
     });
-    let weatherUrl = `${process.env.REACT_APP_SERVER}/weather?city=${this.state.cityName}`;
+    let weatherUrl = `https://city-explorer-apiclass.herokuapp.com/weather?city=${this.state.cityName}`;
      axios.get(weatherUrl).then(res => {
        let weatherList=res.data
+       console.log(weatherList);
       this.setState({
         weatherData: weatherList,
         errMsg: false
@@ -61,7 +62,7 @@ export class App extends Component {
         errorMsg: `${err}`
       })
     });
-    let movieUrl = `${process.env.REACT_APP_SERVER}/movie?query=${this.state.cityName}`;
+    let movieUrl = `http://localhost:4003/movie?query=${this.state.cityName}`;
 
 
      axios.get(movieUrl).then(res =>{

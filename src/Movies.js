@@ -5,8 +5,10 @@ export class Movies extends Component {
     render() {
         return (
             <div>
+                {console.log(this.props)}
                 {this.props.show &&
                 this.props.movieData.map(country => {
+       
                     return (
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={country.image_url} />
